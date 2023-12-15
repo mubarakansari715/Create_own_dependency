@@ -1,6 +1,9 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+
+    //add
+    id("maven-publish")
 }
 
 android {
@@ -42,4 +45,18 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
 
+}
+//add
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.github.mubarakansari715"
+            artifactId = "mycommonlibrary"
+            version = "0.0.1"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }
