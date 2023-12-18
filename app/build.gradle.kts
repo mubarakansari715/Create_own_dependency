@@ -47,4 +47,7 @@ dependencies {
 
     //add module
     implementation(project(":mycommonlibrary"))
+
+    //from
+    //implementation("com.github.mubarakansari715:Create_own_dependency:1.0.1")
 }

@@ -11,7 +11,7 @@ import android.util.Patterns
  *
  * @param email email address as String
  * @return boolean true for valid false for invalid
- * Example : mubarakansari@Bacancy.com
+ * Example : mubarakansari@gmail.com
  */
 fun Context.isEmailValid(email: String): Boolean {
     return !TextUtils.isEmpty(email.trim()) && Patterns.EMAIL_ADDRESS.matcher(email.trim())
